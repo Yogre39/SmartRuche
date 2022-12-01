@@ -17,9 +17,9 @@ const int frequencenuit = 5400;  //5400 soit 1h30
 const int frequencejour = 1200;  //1200 soit 20min
 
 
-String FirmwareVer = {"103"};
-#define URL_fw_Version "https://raw.githubusercontent.com/Yogre39/prog_OTA/master/bin_version.txt"
-#define URL_fw_Bin "https://raw.githubusercontent.com/Yogre39/prog_OTA/master/fw.bin"
+String FirmwareVer = {"102"};
+#define URL_fw_Version "https://raw.githubusercontent.com/Yogre39/SmartRuche/master/bin_version.txt"
+#define URL_fw_Bin "https://raw.githubusercontent.com/Yogre39/SmartRuche/master/fw.bin"
 #include <HTTPUpdate.h>
 #include <WiFiClientSecure.h>
 #include "cert.h"
