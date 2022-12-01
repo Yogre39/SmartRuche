@@ -56,7 +56,7 @@ const int BALLANCE_SCK_PIN = 17 ;//4
 RTC_DATA_ATTR float poids_0;
 RTC_DATA_ATTR float poids_1;
 RTC_DATA_ATTR float poids_2;
-RTC_DATA_ATTR unsigned long TotalMillis;
+RTC_DATA_ATTR unsigned long TotalMillis = 0;
 const unsigned long interval = 43200000;  //vérif MAJ Firmware toutes les 24h
 
    
@@ -301,6 +301,7 @@ void setup() {
      
      TotalMillis += millis();
      if (TotalMillis >= interval) {
+             TotalMillis = 0;
              if (FirmwareVersionCheck()) {firmwareUpdate();}}
      TotalMillis += (TIME_TO_SLEEP*1000); 
     // Serial.print("TotalMillis = ");Serial.println(TotalMillis);
